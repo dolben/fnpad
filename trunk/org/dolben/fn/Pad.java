@@ -53,9 +53,9 @@ public class Pad extends javax.swing.JFrame {
 	
 	private JMenuItem   editCopyItem;   // "Copy" item of "Edit" menu
 	private JMenuItem   editCutItem;	// "Cut" item of "Edit" menu
-    private JTextArea   textPane;		// the editable text pane
+	private JTextArea   textPane;		// the editable text pane
 	private GraphPanel  graphPanel;		// the graph panel
-    private JLabel		statusLine;		// the parser status line
+	private JLabel		statusLine;		// the parser status line
 	private File		file;			// the text file
 	private String		original;		// the original text
 	private Graph		graph;			// the Graph - parse tree Symbol
@@ -67,7 +67,7 @@ public class Pad extends javax.swing.JFrame {
 		initComponents();
 		++news;
 		original = "";
-        setTitle("Untitled_"+news);
+		setTitle("Untitled_"+news);
 	}
   
 	/**
@@ -94,14 +94,14 @@ public class Pad extends javax.swing.JFrame {
 	 */
 	private void readFile( File f ) {
 		file = f;
-        try {
+		try {
 			InputStream input = new FileInputStream(file);
 			InputStreamReader reader = new InputStreamReader(input,CHARSET);
 			textPane.read(reader,null);
 			original = textPane.getText();
 			setTitle(file.getName());
 		} catch ( IOException e ) {
-            System.out.println(e);
+			System.out.println(e);
 		}
 	}
 	
@@ -119,9 +119,9 @@ public class Pad extends javax.swing.JFrame {
 	 *      text area
 	 *      status line
 	 */
-    private void initComponents() {		
+	private void initComponents() {		
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-        addWindowListener(
+		addWindowListener(
 			new WindowAdapter() {
 				public void windowClosing( WindowEvent evt ) {
 					closeFile();
@@ -129,11 +129,11 @@ public class Pad extends javax.swing.JFrame {
 			}
 		);
 
-        JScrollPane textScrollPane = new JScrollPane(
+		JScrollPane textScrollPane = new JScrollPane(
 			JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 			JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED
 		);
-        textPane = new JTextArea();
+		textPane = new JTextArea();
 		String fontName = textPane.getFont().getFontName();
 		fontName = System.getProperty("org.dolben.fn.Pad.fontName",fontName);
 		Integer fontSize = new Integer(textPane.getFont().getSize());
@@ -141,14 +141,14 @@ public class Pad extends javax.swing.JFrame {
 		textPane.setFont(
 			new java.awt.Font(fontName,Font.PLAIN,fontSize.intValue())
 		);
-        textScrollPane.setViewportView(textPane);
+		textScrollPane.setViewportView(textPane);
 		
 		statusLine = new JLabel(" ");
 		
 		JPanel rightPanel = new JPanel();
 		rightPanel.setLayout(new java.awt.BorderLayout());
 		rightPanel.add(textScrollPane,java.awt.BorderLayout.CENTER);
-        rightPanel.add(statusLine,java.awt.BorderLayout.SOUTH);
+		rightPanel.add(statusLine,java.awt.BorderLayout.SOUTH);
 		rightPanel.setMinimumSize(new Dimension(100,100));
 		
 		graph = new Graph();
@@ -162,7 +162,7 @@ public class Pad extends javax.swing.JFrame {
 		splitPane.setOneTouchExpandable(true);
 		splitPane.setContinuousLayout(true);
 		splitPane.setDividerLocation(0);
-        getContentPane().add(splitPane,java.awt.BorderLayout.CENTER);
+		getContentPane().add(splitPane,java.awt.BorderLayout.CENTER);
 
 		
 		textPane.addCaretListener(
@@ -173,11 +173,11 @@ public class Pad extends javax.swing.JFrame {
 			}
 		);
 		
-        JMenuBar menuBar = new JMenuBar();
+		JMenuBar menuBar = new JMenuBar();
 		menuBar.add(initFileMenu());
 		menuBar.add(initEditMenu());
 		menuBar.add(initHelpMenu());
-        setJMenuBar(menuBar);
+		setJMenuBar(menuBar);
 
 		setLocation(x,y);
 		x = (x+20);
@@ -188,7 +188,7 @@ public class Pad extends javax.swing.JFrame {
 		}
 		pack();
 		pads.add(this);
-    }
+	}
 	
 	/**
 	 *  creates the File menu
@@ -205,100 +205,100 @@ public class Pad extends javax.swing.JFrame {
 	 *    Close All (shift-W)
 	 */
 	private JMenu initFileMenu( ) {
-        JMenu fileMenu = new JMenu();
-        fileMenu.setText("File");
+		JMenu fileMenu = new JMenu();
+		fileMenu.setText("File");
 		int keyMask = java.awt.Toolkit.getDefaultToolkit().getMenuShortcutKeyMask();
 		
 		JMenuItem item;
 		
 		item = new JMenuItem("New");
 		item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N,keyMask));
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					newFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        item = new JMenuItem("Open...");
+		item = new JMenuItem("Open...");
 		item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O,keyMask));
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					openFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        fileMenu.add(new JSeparator());
+		fileMenu.add(new JSeparator());
 		
 		item = new JMenuItem("Close");
 		item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W,keyMask));
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					closeFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
 		item = new JMenuItem("Save");
 		item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,keyMask));
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					saveFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        item = new JMenuItem("Save As...");
+		item = new JMenuItem("Save As...");
 		item.setAccelerator(
 			KeyStroke.getKeyStroke(KeyEvent.VK_S,keyMask+KeyEvent.SHIFT_DOWN_MASK)
 		);
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					saveAsFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        fileMenu.add(new JSeparator());
+		fileMenu.add(new JSeparator());
 		
-        item = new JMenuItem("Print...");
+		item = new JMenuItem("Print...");
 		item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P,keyMask));
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					printFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        fileMenu.add(new JSeparator());
+		fileMenu.add(new JSeparator());
 		
-        item = new JMenuItem("Close All");
+		item = new JMenuItem("Close All");
 		item.setAccelerator(
 			KeyStroke.getKeyStroke(KeyEvent.VK_W,keyMask+KeyEvent.SHIFT_DOWN_MASK)
 		);
-        item.addActionListener(
+		item.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					closeAllFile();
 				}
 			}
 		);
-        fileMenu.add(item);
+		fileMenu.add(item);
 		
-        return fileMenu;
+		return fileMenu;
 	}
 	
 	/**
@@ -311,7 +311,7 @@ public class Pad extends javax.swing.JFrame {
 	 *    Select All (A)
 	 *    --------------
 	 *    Calculate (K)
-     *    Back Out (B)
+	 *    Back Out (B)
 	 */
 	private JMenu initEditMenu( ) {
 		JMenu editMenu = new JMenu("Edit");
@@ -324,7 +324,7 @@ public class Pad extends javax.swing.JFrame {
 			getAction(textPane,DefaultEditorKit.cutAction)
 		);
 		editCutItem.setEnabled(false);
-        editMenu.add(editCutItem);
+		editMenu.add(editCutItem);
 		
 		editCopyItem = new JMenuItem("Copy");
 		editCopyItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_C,keyMask));
@@ -332,53 +332,53 @@ public class Pad extends javax.swing.JFrame {
 			getAction(textPane,DefaultEditorKit.copyAction)
 		);
 		editCopyItem.setEnabled(false);
-        editMenu.add(editCopyItem);
+		editMenu.add(editCopyItem);
 		
 		JMenuItem pasteItem = new JMenuItem("Paste");
 		pasteItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_V,keyMask));
 		pasteItem.addActionListener(
 			getAction(textPane,DefaultEditorKit.pasteAction)
 		);
-        editMenu.add(pasteItem);
+		editMenu.add(pasteItem);
 		
 		JMenuItem deleteItem = new JMenuItem("Delete");
 		deleteItem.addActionListener(
 			getAction(textPane,DefaultEditorKit.deletePrevCharAction)
 		);
-        editMenu.add(deleteItem);
+		editMenu.add(deleteItem);
 		
 		JMenuItem allItem = new JMenuItem("Select All");
 		allItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A,keyMask));
 		allItem.addActionListener(
 			getAction(textPane,DefaultEditorKit.selectAllAction)
 		);
-        editMenu.add(allItem);
+		editMenu.add(allItem);
 		
-        editMenu.add(new JSeparator());
+		editMenu.add(new JSeparator());
 		
-        JMenuItem calcItem = new JMenuItem("Calculate");
+		JMenuItem calcItem = new JMenuItem("Calculate");
 		calcItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_K,keyMask));
-        calcItem.addActionListener(
+		calcItem.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					calculate();
 				}
 			}
 		);
-        editMenu.add(calcItem);
+		editMenu.add(calcItem);
 		
-        JMenuItem backOutItem = new JMenuItem("Back Out");
+		JMenuItem backOutItem = new JMenuItem("Back Out");
 		backOutItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_B,keyMask));
-        backOutItem.addActionListener(
+		backOutItem.addActionListener(
 			new ActionListener() {
 				public void actionPerformed( ActionEvent evt ) {
 					backout();
 				}
 			}
 		);
-        editMenu.add(backOutItem);
+		editMenu.add(backOutItem);
 		
-        return editMenu;
+		return editMenu;
 	}
 	
 	/**
@@ -393,7 +393,7 @@ public class Pad extends javax.swing.JFrame {
 	 */
 	private JMenu initHelpMenu( ) {
 		JMenu helpMenu = new JMenu();
-        helpMenu.setText("Help");
+		helpMenu.setText("Help");
 		
 		JMenuItem helpAboutItem = new JMenuItem("About");
 		helpAboutItem.addActionListener(
@@ -403,9 +403,9 @@ public class Pad extends javax.swing.JFrame {
 				}
 			}
 		);
-        helpMenu.add(helpAboutItem);
+		helpMenu.add(helpAboutItem);
 		
-        helpMenu.add(new JSeparator());
+		helpMenu.add(new JSeparator());
 		
 		JMenuItem example;
 		example = new JMenuItem("Calculations");
@@ -581,19 +581,19 @@ public class Pad extends javax.swing.JFrame {
 				Evaluable expr = parser.parseExpression(scanner);
 				if ( expr != null ) {
 					Object result = expr.evaluate();
-                    if ( result != null ) {
-                        String s = results(expr,result,engineering,fixed);
-                        if ( s != null ) {
-                            scanner.backin(s);
-                        }
-                    }
+					if ( result != null ) {
+						String s = results(expr,result,engineering,fixed);
+						if ( s != null ) {
+							scanner.backin(s);
+						}
+					}
 				}
 			}
 		} catch ( Throwable e ) {
-            String msg = e.getMessage();
-            if ( msg == null ) {
-                msg = "probable stack overflow";
-            }
+			String msg = e.getMessage();
+			if ( msg == null ) {
+				msg = "probable stack overflow";
+			}
 			statusLine.setText("ERROR: "+msg);
 			scanner.setCursor();
 			graph.reset(parser.getSymbols());
@@ -609,10 +609,10 @@ public class Pad extends javax.swing.JFrame {
 	private String results(
 		Evaluable expr, Object result, DecimalFormat engineering, DecimalFormat fixed
 	) throws Exception {
-        if ( result instanceof Graph ) {
-            graph.add(expr);
-            return null;
-        }
+		if ( result instanceof Graph ) {
+			graph.add(expr);
+			return null;
+		}
 		if ( result instanceof Double ) {
 			Double d = (Double)result;
 			if ( d.isNaN() || d.isInfinite() ) {

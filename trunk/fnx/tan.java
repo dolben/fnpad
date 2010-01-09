@@ -12,17 +12,17 @@ public class tan extends org.dolben.fn.Function {
 	/**
 	 *  makes an object that calculates the tangent of its argument
 	 */
-    public tan( ) {
-        super(1);
-    }
-    
+	public tan( ) {
+		super(1);
+	}
+	
 	/**
 	 *  calculates the tangent of the zeroth argument
 	 *
 	 *  @return tangent
 	 */
-    protected Object evaluate( ) throws Exception {
-        return new Double(Math.tan(getDouble(0)));
-    }
+	protected Object evaluate( ) throws Exception {
+		return new Double(Math.tan(getDouble(0)));
+	}
 
 }

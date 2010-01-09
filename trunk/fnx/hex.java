@@ -14,17 +14,17 @@ public class hex extends org.dolben.fn.Function {
 	/**
 	 *  makes a hexadecimal String of its argument
 	 */
-    public hex( ) {
-        super(1);
-    }
-    
+	public hex( ) {
+		super(1);
+	}
+	
 	/**
 	 *  converts the zeroth argument to a hexadecimal string
 	 *
 	 *  @return integer as a hexadecimal string
 	 */
-    protected Object evaluate( ) throws Exception {
-        return new HexLong(getLong(0));
-    }
+	protected Object evaluate( ) throws Exception {
+		return new HexLong(getLong(0));
+	}
 
 }

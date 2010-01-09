@@ -46,10 +46,10 @@ class Graph extends Symbol {
 	
 	private List<GrafExpression>	_grafs;	// the Grafs, one for each application of graph()
 	private GrafExpression
-					    _graphing; // evaluating while graphing
+						_graphing; // evaluating while graphing
 	private Graphics _graphics;          // graphics context during drawAll()
 	private Map<String,Symbol> _symbols; // a reference to the Parser's symbol table
-	private Scale    _xs;		         // the scale of x, between pixels and values
+	private Scale    _xs;				 // the scale of x, between pixels and values
 	private Scale    _ys;		// the scale of y, between pixels and values
 	private Axis	 _xa;		// the x axis
 	private Axis	 _ya;		// the y axis
