@@ -8,21 +8,21 @@ package fnx;
  *  a fnPad tangent Function
  */
 public class tan extends org.dolben.fn.Function {
-	
-	/**
-	 *  makes an object that calculates the tangent of its argument
-	 */
-	public tan( ) {
-		super(1);
-	}
-	
-	/**
-	 *  calculates the tangent of the zeroth argument
-	 *
-	 *  @return tangent
-	 */
-	protected Object evaluate( ) throws Exception {
-		return new Double(Math.tan(getDouble(0)));
-	}
+    
+    /**
+     *  makes an object that calculates the tangent of its argument
+     */
+    public tan( ) {
+        super(1);
+    }
+    
+    /**
+     *  calculates the tangent of the zeroth argument
+     *
+     *  @return tangent
+     */
+    protected Object evaluate( ) throws Exception {
+        return new Double(Math.tan(getDouble(0)));
+    }
 
 }

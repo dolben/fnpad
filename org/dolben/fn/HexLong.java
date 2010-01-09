@@ -8,23 +8,23 @@ package org.dolben.fn;
  *  a hexadecimal Long
  */
 public class HexLong {
-	
-	private long value;
-	
-	/**
-	 *  makes a hexadecimal String of its argument
-	 */
-	public HexLong( long v ) {
-		value = v;
-	}
-	
-	/**
-	 *  converts value to a hexadecimal string
-	 *
-	 *  @return value as a hexadecimal string
-	 */
-	public String toString( ) {
-		return "0x"+Long.toHexString(value);
-	}
+    
+    private long value;
+    
+    /**
+     *  makes a hexadecimal String of its argument
+     */
+    public HexLong( long v ) {
+        value = v;
+    }
+    
+    /**
+     *  converts value to a hexadecimal string
+     *
+     *  @return value as a hexadecimal string
+     */
+    public String toString( ) {
+        return "0x"+Long.toHexString(value);
+    }
 
 }
