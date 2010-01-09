@@ -5,17 +5,17 @@
 package org.dolben.fn;
 
 class EqualTo extends BinaryOperation {
-	
-	public EqualTo( Evaluable left, Evaluable right ) {
-		super(left,right,"==");
-	}
-	
-	protected Object operate( long left, long right ) {
-		return new Boolean(left==right);
-	}
-	
-	protected Object operate( double left, double right ) {
-		return new Boolean(left==right);
-	}
-	
+    
+    public EqualTo( Evaluable left, Evaluable right ) {
+        super(left,right,"==");
+    }
+    
+    protected Object operate( long left, long right ) {
+        return new Boolean(left==right);
+    }
+    
+    protected Object operate( double left, double right ) {
+        return new Boolean(left==right);
+    }
+    
 }

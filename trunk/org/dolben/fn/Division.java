@@ -6,17 +6,17 @@
 package org.dolben.fn;
 
 class Division extends BinaryOperation {
-	
-	public Division( Evaluable left, Evaluable right ) {
-		super(left,right,"/");
-	}
-	
-	protected Object operate( long left, long right ) {
-		return new Long(left/right);
-	}
-	
-	protected Object operate( double left, double right ) {
-		return new Double(left/right);
-	}
-	
+    
+    public Division( Evaluable left, Evaluable right ) {
+        super(left,right,"/");
+    }
+    
+    protected Object operate( long left, long right ) {
+        return new Long(left/right);
+    }
+    
+    protected Object operate( double left, double right ) {
+        return new Double(left/right);
+    }
+    
 }
