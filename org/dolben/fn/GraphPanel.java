@@ -13,29 +13,29 @@ import java.awt.Color;
 
 class GraphPanel extends JPanel {
 
-	static final long serialVersionUID = 2;
-	private Graph _graph;
-	
-	GraphPanel( Graph graph ) {
-		_graph = graph;
-		setBorder(
-			BorderFactory.createBevelBorder(
-				BevelBorder.LOWERED,Color.white,Color.gray
-			)
-		);
-	}
-	
-	public void printAll( Graphics g ) {
-		Rectangle bounds = g.getClipBounds();
-		_graph.drawAll(g,bounds.width,bounds.height);
-	}
-	
-	protected void paintComponent( Graphics g ) {
-		int height = getHeight();
-		int width = getWidth();
-		g.setColor(Color.white);
-		g.fillRect(0,0,width,height);
-		_graph.drawAll(g,width,height);
-	}
+    static final long serialVersionUID = 2;
+    private Graph _graph;
+    
+    GraphPanel( Graph graph ) {
+        _graph = graph;
+        setBorder(
+            BorderFactory.createBevelBorder(
+                BevelBorder.LOWERED,Color.white,Color.gray
+            )
+        );
+    }
+    
+    public void printAll( Graphics g ) {
+        Rectangle bounds = g.getClipBounds();
+        _graph.drawAll(g,bounds.width,bounds.height);
+    }
+    
+    protected void paintComponent( Graphics g ) {
+        int height = getHeight();
+        int width = getWidth();
+        g.setColor(Color.white);
+        g.fillRect(0,0,width,height);
+        _graph.drawAll(g,width,height);
+    }
 
 }

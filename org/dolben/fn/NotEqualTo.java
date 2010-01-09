@@ -5,17 +5,17 @@
 package org.dolben.fn;
 
 class NotEqualTo extends BinaryOperation {
-	
-	public NotEqualTo( Evaluable left, Evaluable right ) {
-		super(left,right,"!=");
-	}
-	
-	protected Object operate( long left, long right ) {
-		return new Boolean(left!=right);
-	}
-	
-	protected Object operate( double left, double right ) {
-		return new Boolean(left!=right);
-	}
-	
+    
+    public NotEqualTo( Evaluable left, Evaluable right ) {
+        super(left,right,"!=");
+    }
+    
+    protected Object operate( long left, long right ) {
+        return new Boolean(left!=right);
+    }
+    
+    protected Object operate( double left, double right ) {
+        return new Boolean(left!=right);
+    }
+    
 }
