@@ -25,11 +25,11 @@ class GraphPanel extends JPanel {
 		);
 	}
 	
-    public void printAll( Graphics g ) {
-        Rectangle bounds = g.getClipBounds();
+	public void printAll( Graphics g ) {
+		Rectangle bounds = g.getClipBounds();
 		_graph.drawAll(g,bounds.width,bounds.height);
-    }
-    
+	}
+	
 	protected void paintComponent( Graphics g ) {
 		int height = getHeight();
 		int width = getWidth();

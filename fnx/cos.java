@@ -12,10 +12,10 @@ public class cos extends org.dolben.fn.Function {
 	/**
 	 *  makes an object that calculates the cosine of its argument
 	 */
-    public cos( ) {
-        super(1);
-    }
-    
+	public cos( ) {
+		super(1);
+	}
+	
 	/**
 	 *  calculates the cosine of the zeroth argument
 	 *
@@ -23,8 +23,8 @@ public class cos extends org.dolben.fn.Function {
 	 *
 	 *  @throws Exception when argument is not a Number
 	 */
-    protected Object evaluate( ) throws Exception {
-        return new Double(Math.cos(getDouble(0)));
-    }
+	protected Object evaluate( ) throws Exception {
+		return new Double(Math.cos(getDouble(0)));
+	}
 
 }
