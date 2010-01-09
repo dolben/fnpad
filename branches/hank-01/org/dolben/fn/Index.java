@@ -13,7 +13,7 @@ class Index extends Evaluable {
 	
 	private Evaluable _expr;  // an expression resulting in an array
 	private Evaluable _index; // an index expression
-    
+	
 	/**
 	 *  makes an indexing node
 	 */
@@ -25,9 +25,9 @@ class Index extends Evaluable {
 	/**
 	 *  evaluates the indexing of an array
 	 */
-    public Object evaluate( ) throws Exception {
+	public Object evaluate( ) throws Exception {
 		return evaluate(new Stack<Long>());
-    }
+	}
 	
 	/**
 	 *  evaluates the indexing of an array

@@ -15,28 +15,28 @@ public class fix extends org.dolben.fn.Function {
 	/**
 	 *  makes a fixed point decimal string of its argument
 	 */
-    public fix( ) {
-        super(2);
-    }
-    
+	public fix( ) {
+		super(2);
+	}
+	
 	/**
 	 *  converts the zeroth argument to a fixed point decimal string
 	 *
 	 *  @return integer as a fixed point decimal string
 	 */
-    protected Object evaluate( ) throws Exception {
-        long places = getLong(1);
-        if ( places > 40 ) {
-            places = 40;
-        }
-        String d = "";
-        if ( places > 0 ) {
-            d = ".";
-            while ( places-- > 0 ) {
-                d += "0";
-            }
-        }
-        return new FormatDouble(getDouble(0),new DecimalFormat("##0"+d));
-    }
+	protected Object evaluate( ) throws Exception {
+		long places = getLong(1);
+		if ( places > 40 ) {
+			places = 40;
+		}
+		String d = "";
+		if ( places > 0 ) {
+			d = ".";
+			while ( places-- > 0 ) {
+				d += "0";
+			}
+		}
+		return new FormatDouble(getDouble(0),new DecimalFormat("##0"+d));
+	}
 
 }

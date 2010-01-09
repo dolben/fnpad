@@ -16,7 +16,7 @@ abstract class Evaluable {
 	 *
 	 *  @throws Exception when something goes wrong with evaluation
 	 */
-    public abstract Object evaluate( ) throws Exception;
+	public abstract Object evaluate( ) throws Exception;
 
 	/**
 	 *  evaluates this expression with indexing
@@ -25,7 +25,7 @@ abstract class Evaluable {
 	 *
 	 *  @throws Exception when something goes wrong with evaluation
 	 */
-    public Object evaluate( Stack<Long> indest ) throws Exception {
+	public Object evaluate( Stack<Long> indest ) throws Exception {
 		if ( indest.empty() ) {
 			return evaluate();
 		} else {
