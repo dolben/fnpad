@@ -1,7 +1,7 @@
 /**
  *
  *  fnPad: a functional programming style calculator
- *  Copyright (c) 2001-2010 Hank Dolben, org.dolben.fn.LICENSE
+ *  Copyright (c) 2001-2010 Hank Dolben, org.dolben.fn.Pad.LICENSE
  */
 package fnx;
 
