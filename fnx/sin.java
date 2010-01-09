@@ -8,14 +8,14 @@ package fnx;
  *  a fnPad sine Function
  */
 public class sin extends org.dolben.fn.Function {
-    
+	
 	/**
 	 *  makes an object that calculates the sine of its argument
 	 */
-    public sin() {
-        super(1);
-    }
-    
+	public sin() {
+		super(1);
+	}
+	
 	/**
 	 *  calculates the sine of the zeroth argument
 	 *
@@ -23,8 +23,8 @@ public class sin extends org.dolben.fn.Function {
 	 *
 	 *  @throws Exception when argument is not a Number
 	 */
-    protected Object evaluate( ) throws Exception {
-        return new Double(Math.sin(getDouble(0)));
-    }
-    
+	protected Object evaluate( ) throws Exception {
+		return new Double(Math.sin(getDouble(0)));
+	}
+	
 }
