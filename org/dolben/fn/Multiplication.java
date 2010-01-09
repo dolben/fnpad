@@ -1,6 +1,4 @@
 /**
- *  @author  Hank Dolben
- *  @version 2004 Mar 24
  *
  *  fnPad: a functional programming style calculator
  *  Copyright (c) 2001-2010 Hank Dolben
