@@ -17,6 +17,13 @@ class Addition extends Evaluable {
         _right = right;
     }
     
+    /**
+     *  gets the result of "adding" its two operands
+     *  which can be
+     *      two Numbers, result is the arithmetic sum
+     *      a String and anything else, result is the concatenation of strings
+     *      two Lists, result is the concatenation of the lists
+     */
     public Object evaluate( ) throws Exception {
         Object left = _left.evaluate();
         Object right = _right.evaluate();
@@ -38,7 +45,7 @@ class Addition extends Evaluable {
             return concatenation;
         } else {
             throw new Exception(
-                "types of '"+_left+"' and '"+_right+"' are not compatible"
+                "types of '"+_left+"' and '"+_right+"' are incompatible"
             );
         }
     }
