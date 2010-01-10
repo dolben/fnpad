@@ -5,18 +5,42 @@
  */
 package org.dolben.fn;
 
-class Addition extends BinaryOperation {
+import java.util.List;
+import java.util.LinkedList;
+
+class Addition extends Evaluable {
+    private Evaluable _left;
+    private Evaluable _right;
     
     public Addition( Evaluable left, Evaluable right ) {
-        super(left,right,"+");
+        _left = left;
+        _right = right;
     }
     
-    protected Object operate( long left, long right ) {
-        return new Long(left+right);
+    public Object evaluate( ) throws Exception {
+        Object left = _left.evaluate();
+        Object right = _right.evaluate();
+        if ( left instanceof Number && right instanceof Number ) {
+            Number a = (Number)left;
+            Number b = (Number)right;
+            if ( a instanceof Long && b instanceof Long ) {
+                return new Long(a.longValue()+b.longValue());
+            } else {
+                return new Double(a.doubleValue()+b.doubleValue());
+            }
+        } else if ( left instanceof String ) {
+            return (String)left+right;
+        } else if ( right instanceof String ) {
+            return left+(String)right;
+        } else if ( left instanceof List<?> && right instanceof List<?> ) {
+            List<Object> concatenation = new LinkedList<Object>((List<?>)right);
+            concatenation.addAll((List<?>)left);
+            return concatenation;
+        } else {
+            throw new Exception(
+                "types of '"+_left+"' and '"+_right+"' are not compatible"
+            );
+        }
     }
     
-    protected Object operate( double left, double right ) {
-        return new Double(left+right);
-    }
-        
 }
