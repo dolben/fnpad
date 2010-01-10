@@ -18,7 +18,7 @@ public class Pad extends javax.swing.JFrame {
     public final static long    serialVersionUID = 1;
     private final static String VERSION   = "0.32";
     private final static int    THIS_YEAR = 2010;
-    // The MIT License http://www.opensource.org/licenses/mit-license.php
+    // The MIT License, http://www.opensource.org/licenses/mit-license.php
     public final static String  LICENSE =
 "Copyright (c) 2001-"+THIS_YEAR+" Hank Dolben\n"+
 "\n"+
