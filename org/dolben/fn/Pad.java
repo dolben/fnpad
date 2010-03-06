@@ -20,7 +20,7 @@ public class Pad extends javax.swing.JFrame {
     private final static int    THIS_YEAR = 2010;
     // The MIT License, http://www.opensource.org/licenses/mit-license.php
     public final static String  LICENSE =
-"Copyright (c) 2001-"+THIS_YEAR+" Hank Dolben\n"+
+"Copyright © 2001-"+THIS_YEAR+" Hank Dolben\n"+
 "\n"+
 "Permission is hereby granted, free of charge, to any person obtaining a copy\n"+
 "of this software and associated documentation files (the \"Software\"), to deal\n"+
