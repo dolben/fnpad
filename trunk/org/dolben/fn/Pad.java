@@ -18,9 +18,9 @@ public class Pad extends javax.swing.JFrame {
     public final static long    serialVersionUID = 1;
     private final static String VERSION   = "0.32";
     private final static int    THIS_YEAR = 2010;
-    // The MIT License http://www.opensource.org/licenses/mit-license.php
+    // The MIT License, http://www.opensource.org/licenses/mit-license.php
     public final static String  LICENSE =
-"Copyright (c) 2001-"+THIS_YEAR+" Hank Dolben\n"+
+"Copyright © 2001-"+THIS_YEAR+" Hank Dolben\n"+
 "\n"+
 "Permission is hereby granted, free of charge, to any person obtaining a copy\n"+
 "of this software and associated documentation files (the \"Software\"), to deal\n"+
@@ -46,20 +46,20 @@ public class Pad extends javax.swing.JFrame {
         LICENSE;
     private final static String CHARSET   = "UTF-8";
     
-    private static int news =   0;		// the number of new pads
-    private static int x    = 100;		// the position of a constructed pad
+    private static int news =   0;      // the number of new pads
+    private static int x    = 100;      // the position of a constructed pad
     private static int y    =  50;
     private static JFileChooser fileChooser; // the file chooser
-    private static List<Pad> pads;			// all the pads
+    private static List<Pad> pads;      // all the pads
     
     private JMenuItem   editCopyItem;   // "Copy" item of "Edit" menu
-    private JMenuItem   editCutItem;	// "Cut" item of "Edit" menu
-    private JTextArea   textPane;		// the editable text pane
-    private GraphPanel  graphPanel;		// the graph panel
-    private JLabel		statusLine;		// the parser status line
-    private File		file;			// the text file
-    private String		original;		// the original text
-    private Graph		graph;			// the Graph - parse tree Symbol
+    private JMenuItem   editCutItem;    // "Cut" item of "Edit" menu
+    private JTextArea   textPane;       // the editable text pane
+    private GraphPanel  graphPanel;     // the graph panel
+    private JLabel      statusLine;     // the parser status line
+    private File        file;           // the text file
+    private String      original;       // the original text
+    private Graph       graph;          // the Graph - parse tree Symbol
 
     /**
      *  makes a new Pad
