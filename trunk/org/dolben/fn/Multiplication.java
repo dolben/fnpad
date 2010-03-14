@@ -1,7 +1,7 @@
 /**
  *
  *  fnPad: a functional programming style calculator
- *  Copyright (c) 2001-2010 Hank Dolben
+ *  Copyright © 2001-2010 Hank Dolben
  */
 package org.dolben.fn;
 
