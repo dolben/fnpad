@@ -1,0 +1,1 @@
+[fnPad](http://www.dolben.org/fnPad.php) (pronounced "fun-pad") is a text editor based, graphing, programmable calculator. Arithmetic expressions are entered in a text window, and when calculated, by selecting the "Calculate" menu item, the results are inserted into the text following the expressions.
