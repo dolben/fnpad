@@ -1,6 +1,6 @@
 /**
  *  dogs: discrete ordered generic series
- *  Copyright © 2001-2010 Hank Dolben, org.dolben.fn.Pad.LICENSE
+ *  Copyright Â© 2001-2010 Hank Dolben, org.dolben.fn.Pad.LICENSE
  */
 package org.dolben.dogs;
 

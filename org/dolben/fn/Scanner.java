@@ -1,6 +1,6 @@
 /**
  *  fnPad: a functional programming style calculator
- *  Copyright © 2001-2010 Hank Dolben, org.dolben.fn.Pad.LICENSE
+ *  Copyright Â© 2001-2010 Hank Dolben, org.dolben.fn.Pad.LICENSE
  */
 package org.dolben.fn;
 
@@ -18,7 +18,7 @@ class Scanner {
     static final int LEFT_PARENTHESIS		=  8;
     static final int RIGHT_PARENTHESIS		=  9;
     static final int COLON					= 10;
-    static final int WAVY_EQUALS			= 11;  // Å
+    static final int WAVY_EQUALS			= 11;  // â‰ˆ
     static final int EQUALS					= 12;
     static final int PERCENT				= 13;
     static final int QUESTION_MARK			= 14;
