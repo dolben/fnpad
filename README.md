@@ -1,1 +1,1 @@
-https://dolben.org/fnPad.html
+https://dolben.org/fnPad.php
